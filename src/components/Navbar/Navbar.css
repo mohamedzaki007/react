@@ -1,0 +1,47 @@
+/* الأنماط العامة للـ Navbar */
+nav {
+  background-color: #2c3e50;
+  z-index: 3; /* يضمن بقاء الـ Navbar فوق المحتوى */
+}
+
+/* نمط الشعار (Start Framework) */
+.navbar-brand h1 { /* استهدف h1 داخل الـ navbar-brand */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand h1:hover {
+  color: cyan;
+}
+
+/* نمط روابط التنقل (About, Portfolio, Contact) */
+.navbar-nav .nav-link { /* استهدف .nav-link داخل .navbar-nav ليكون أكثر تحديدًا */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: cyan;
+}
+
+/* نمط الرابط النشط */
+.activ-link {
+  /* color: cyan; */
+  background-color: rgba(26, 37, 47, 0.6);
+}
+
+/* ----------------------------------------------- */
+/* الكود الجديد أو المعدل لجعل أيقونة الموبايل بيضاء */
+/* ----------------------------------------------- */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* لإصلاح لون زر الـ toggler نفسه (الحدود والخلفية عند الفوكس) */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1); /* لون حدود الزر */
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25); /* لون الفوكس */
+}
