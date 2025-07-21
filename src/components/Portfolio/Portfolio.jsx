@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "./Portfolio.css"; // تأكد من أن هذا المسار صحيح
+import "./Portfolio.css"; 
 
-// استورد الصور مباشرة في بداية الملف
-import poert1 from "../../assets/images/poert1.png"; // تأكد من هذه المسارات والأسماء
-import port2 from "../../assets/images/port2.png";   // تأكد من هذه المسارات والأسماء
-import port3 from "../../assets/images/port3.png";   // تأكد من هذه المسارات والأسماء
+import poert1 from "../../assets/images/poert1.png"; 
+import port2 from "../../assets/images/port2.png";  
+import port3 from "../../assets/images/port3.png";   
 
 export default function Portfolio() {
   const [previewImageSrc, setPreviewImageSrc] = useState(null);
@@ -39,8 +38,6 @@ export default function Portfolio() {
         </div>
 
         <div className="row g-4 mt-3">
-          {/* هنا أجزاء عرض الصور المصغرة */}
-          {/* تأكد من أن الصور المستوردة (poert1, port2, port3) معرفة بشكل صحيح في الأعلى */}
           <div className="col-md-6 col-lg-4">
             <div
               className="card overflow-hidden rounded-3 position-relative"
@@ -115,18 +112,16 @@ export default function Portfolio() {
         </div>
       </div>
 
-      {/* هذا هو الجزء الذي يتسبب في التحذير ويحتاج للتعديل */}
       <div
         className={`preview-img d-flex justify-content-center align-items-center bg-info bg-opacity-25 position-fixed top-0 start-0 w-100 vh-100 ${
           isPreviewVisible ? "d-block" : "d-none"
         }`}
         onClick={closeImg}
       >
-        {/* الحل: استخدم التصيير الشرطي لعنصر الصورة <img> */}
         {isPreviewVisible && previewImageSrc && (
           <img
             id="img-preview"
-            src={previewImageSrc} // لا داعي لـ || "" لأنك تتأكد من وجود القيمة
+            src={previewImageSrc} 
             alt="preview img"
             className="w-50 mt-5 rounded-3"
           />
